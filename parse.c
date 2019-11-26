@@ -29,7 +29,7 @@ char ** parse_args( char * line ){
     // Returns the beginning of the original string,
     // sets source to the string starting at 1 index past the location of the new NULL
     token = strsep(&curr, " ");
-    // pointers[i] = token;
+    pointers[i] = token;
     printf("iteration %d | curr: %s | token: %s\n", i, curr, token);
     i++;
   }
@@ -38,6 +38,7 @@ char ** parse_args( char * line ){
 
 int main(){
   char * line = strdup("ls -a -l");
+  printf("Testing parse_args (run 'ls -a -l'):\n");
   char ** args = parse_args( line );
   execvp(args[0], args);
   return 0;
