@@ -33,6 +33,7 @@ char ** parse_args( char * line ){
     printf("iteration %d | curr: %s | token: %s\n", i, curr, token);
     i++;
   }
+  return pointers;
 }
 
 int main(){
