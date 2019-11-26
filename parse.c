@@ -23,7 +23,7 @@
 char ** parse_args( char * line ){
   char * curr = line;
   char * token;
-  char ** pointers = malloc(5 * sizeof(char *)); //allocate memory for pointers
+  char ** pointers = malloc(5 * sizeof(char *) * sizeof(char *)); //allocate memory for pointers
   int i = 0;
   while (curr){
     // curr = strsep(&curr, " ");
