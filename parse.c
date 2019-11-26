@@ -29,7 +29,7 @@ char ** parse_args( char * line ){
     // Returns the beginning of the original string,
     // sets source to the string starting at 1 index past the location of the new NULL
     token = strsep(&curr, " ");
-    pointers[i] = token;
+    // pointers[i] = token;
     printf("iteration %d | curr: %s | token: %s\n", i, curr, token);
     i++;
   }
