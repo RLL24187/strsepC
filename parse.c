@@ -38,14 +38,15 @@ char ** parse_args( char * line ){
 }
 
 int main(){
-  char * line = strdup("ls -a -l");
-  printf("Testing parse_args (run 'ls -a -l'):\n");
-  char ** args = parse_args( line );
-  execvp(args[0], args);
+  // char * line = strdup("ls -a -l");
+  // printf("Testing parse_args (run 'ls -a -l'):\n");
+  // char ** args = parse_args( line );
+  // execvp(args[0], args);
 
-  line = strdup("ls -a -l -r -d");
+  // 5 args (max)
+  char * line = strdup("ls -a -l -r -d");
   printf("Testing parse_args (run ls -a -l -r -S)\n");
-  args = parse_args( line );
+  char ** args = parse_args( line );
   execvp(args[0], args);
   return 0;
 }
