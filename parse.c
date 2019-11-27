@@ -26,7 +26,7 @@ char ** parse_args( char * line ){
   char ** pointers = malloc(5 * sizeof(char *)); //allocate memory for 5 pointers (b/c at most 5 args)
   int i = 0;
   while (curr){
-    pointers[i] = malloc(strlen(line)+1)    // allocate desired memory to each pointer
+    pointers[i] = malloc(strlen(line)+1);    // allocate desired memory to each pointer
     token = strsep(&curr, " ");
     // Returns the beginning of the original string,
     // sets source to the string starting at 1 index past the location of the new NULL
