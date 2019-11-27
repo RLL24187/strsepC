@@ -44,7 +44,7 @@ int main(){
   // execvp(args[0], args);
 
   // 5 args (max)
-  char * line = strdup("ls -a -l -r -d");
+  char * line = strdup("ls -a -l -r -S");
   printf("Testing parse_args (run ls -a -l -r -S)\n");
   char ** args = parse_args( line );
   execvp(args[0], args);
