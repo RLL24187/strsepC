@@ -47,5 +47,6 @@ int main(){
   printf("Testing parse_args (run ls -a -l -r)\n");
   char ** args = parse_args( line );
   execvp(args[0], args);
+  free(args); //memory no longer needed
   return 0;
 }
